@@ -23,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         WebView webView = new WebView (this);
         setContentView (webView);
-        webView.loadUrl("http://wwwlab.iit.his.se/a18jonsj/prototyp.html");
+        //webView.loadUrl("http://wwwlab.iit.his.se/a18jonsj/prototyp.html");
+        webView.loadUrl("file:///android_asset/sample.html");
+
+
+
 
 
         // 1. Create a WebView element in the layout file content_main.xml
