@@ -8,10 +8,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
     // Create a private member variable that can hold our WebView
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +26,18 @@ public class MainActivity extends AppCompatActivity {
 
         WebView webView = new WebView (this);
         setContentView (webView);
-        //webView.loadUrl("http://wwwlab.iit.his.se/a18jonsj/prototyp.html");
-        webView.loadUrl("file:///android_asset/sample.html");
+        webView.loadUrl("http://wwwlab.iit.his.se/a18jonsj/prototyp.html");
+        //webView.loadUrl("file:///android_asset/sample.html");
+
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
+        webSettings.setSupportZoom(true);
+        webSettings.setDefaultTextEncodingName("utf-8");
 
 
 
